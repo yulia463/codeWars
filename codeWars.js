@@ -204,7 +204,6 @@
 // console.log(caunter(allMessages))
 
 
-
 // function multiply(a, b){
 //     a * b
 //     let result  ;
@@ -214,25 +213,255 @@
 // console.log(multiply(10,2))
 
 
-function even_or_odd(number) {
-let result ;
-if(number %2 ==0){
-    result="Even"
-}else{
-   result="Odd"
+// function even_or_odd(number) {
+// let result ;
+// if(number %2 ==0){
+//     result="Even"
+// }else{
+//    result="Odd"
+//
+// }
+//
+// return result;
+// }
+// console.log(even_or_odd(22))
+//
+//задача с learn javascript
 
-}
+// let users = [
+//     {name: "Вася", age: 25},
+//     {name: "Петя", age: 30},
+//     {name: "Маша", age: 28}
+// ];
+//
+// // let names = users.map((u)=>u.name)
+// let ages = users.filter((u)=>u.age>27)
+// console.log(ages); // Вася, Петя, Маша
 
-return result;
-}
-console.log(even_or_odd(22))
+// let users = [
+//     { name: "Вася", surname: "Пупкин", id: 1 },
+//     { name: "Петя", surname: "Иванов", id: 2 },
+//     { name: "Маша", surname: "Петрова", id: 3 },
+// ];
+//
+// let usersMapped = users.map((u)=>({fullName: `${u.name} ${u.surname}` , id: u.id}))
+// console.log(usersMapped)
+/*
+usersMapped = [
+  { fullName: "Вася Пупкин", id: 1 },
+  { fullName: "Петя Иванов", id: 2 },
+  { fullName: "Маша Петрова", id: 3 }
+]
+*/
+// задача с код ворса
+// function opposite(number) {
+//     return number * (-1)
+// }
+// console.log(opposite(15))
+
+// function maps(x){
+// let result=x.map((m)=>m *2)
+//     return result
+// }
+// console.log(maps([1,2,3]))
 
 
+// Учитывая массив целых чисел, ваше решение должно найти наименьшее целое число.
+//
+//     Например:
+//
+// Учитывая [34, 15, 88, 2], что ваше решение вернется2
+// Учитывая [34, -345, -1, 100], что ваше решение вернется-345
+// Для целей этого ката вы можете предположить, что предоставленный массив не будет пустым.
 
 
+// function findSmallestInt(args) {
+//     let result = args[0];
+//     for (let i = 0; i < args.length; i++) {
+//
+//         if(args[i] < result){
+//             result= args[i]
+//         }
+//     }
+//     return result
+//
+//
+// }
+//args[0]
+// console.log(findSmallestInt([2, -5, 8, 0]))
 
 
+//
+// Просто удалите пробелы из строки, затем верните результирующую строку
+
+// function noSpace(x){
+// return x.split('').filter((item)=> item !== ' ').join('')
+//
+// }
+//
+// console.log(noSpace('8 j 8   mBliB8g  imjB8B8  jl  B'))
+
+// Завершите функцию квадратной суммы, чтобы она возводила в квадрат каждое переданное ей число, а затем суммировала результаты.
+//
+//     Например, for [1, 2, 2]это должно возвращаться , 9потому что 1^2 + 2^2 + 2^2 = 9.
+
+// function squareSum(numbers){
+// return numbers.map((o)=>o*o).reduce((sum, current) => sum + current, 0);
+// }
+//
+// console.log(squareSum([1,2,2]))
 
 
+// Найдите среднее значение (среднее) списка чисел в массиве.
+//
+//     Информация
+// Чтобы найти среднее значение (среднее) набора чисел, сложите все числа вместе и разделите на количество значений в списке.
+//
+//     Для примера список1, 3, 5, 7
+//
+// 1. Сложите все числа
+//
+// 1+3+5+7 = 16
+// 2. Разделить на количество значений в списке. В этом примере в списке 4 числа.
+//
+// 16/4 = 4
+// 3. Среднее (или среднее) этого списка равно 4.
+// let findAverage = function (nums) {
+//     //nums = [1, 3, 5, 7]
+//     let n=0;
+//     for (i=0; i<nums.length ;i++){
+//        n+=nums[i]
+//     }
+// let vreeq=nums.length
+//     return n/vreeq
+// }
+// console.log(findAverage([1,3,5,7]))
 
 
+// Сможете ли вы найти иголку в стоге сена?
+//
+//     Напишите функцию findNeedle(), которая принимает arrayполный мусор, но содержит один"needle"
+//
+// После того, как ваша функция найдет иглу, она должна вернуть сообщение (в виде строки), в котором говорится:
+//
+//     "found the needle at position "плюс indexон нашел иглу, так что:
+//
+//     Пример (ввод --> вывод)
+//
+//         ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5"
+// Примечание. В COBOL он должен возвращать "found the needle at position 6"
+// function findNeedle(haystack) {
+//     for(let i=0; i<haystack.length ;i++){
+//         if (haystack[i]==='needle'){
+//             return `found the needle at position ${i}`
+//         }
+//     }
+//   return
+// }
+// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))
+
+// В этом ката ваша задача состоит в том, чтобы вернуть два различных самых высоких значения в списке. Если уникальных значений меньше двух, верните как можно больше из них.
+//
+//     Результат также должен быть упорядочен от высшего к низшему.
+//
+//     Примеры:
+//
+// [4, 10, 10, 9]  =>  [10, 9]
+//     [1, 1, 1]  =>  [1]
+//     []  =>  []
+
+// function twoHighest(arr) {
+//     let result =[];
+//     let ty = arr.sort(function (a, b) {
+//         return b - a;
+//     });
+//     for(let i=0; i<ty.length; i++){
+//         if(ty[i] && result.length<2 && ty[i] !== ty[i-1]){
+//             result.push(ty[i])
+//         }
+//     }
+//     return result;
+// }
+//
+// console.log(twoHighest([ ]))
+// Суммирование
+// Напишите программу, которая находит сумму всех чисел от 1 до num. Число всегда будет положительным целым числом больше 0.
+//
+// Например:
+//     summation(2) -> 3
+// 1 + 2
+// summation(8) -> 36
+// 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+
+// let summation = function (num) {
+//     let result = 0
+//     for (let i = 1; i <= num; i ++) {
+//        console.log(i)
+//         result = result+i
+//     }
+//    return result;
+// }
+// console.log(summation(8));
+
+// Рассмотрим массив/список овец, где некоторые овцы могут отсутствовать на своем месте. Нам нужна функция, которая подсчитывает количество овец, присутствующих в массиве (true означает наличие).
+//
+// Например,
+//
+//     [true,  true,  true,  false,
+//         true,  true,  true,  true ,
+//         true,  false, true,  false,
+//         true,  false, false, true ,
+//         true,  true,  true,  true ,
+//         false, false, true,  true]
+// Правильный ответ будет 17.
+//
+// Подсказка: не забудьте проверить наличие неправильных значений, таких как null/undefined
+
+// function countSheeps(arrayOfSheep) {
+//     let result = 0 ;
+//
+//         for(let i=0 ; i<arrayOfSheep.length; i++){
+//            if( arrayOfSheep[i] === true ){
+//                result++
+//            }
+//         }
+//    return result
+// }
+// console.log(countSheeps([true,  true,  true,  false,
+//     true,  true,  true,  true ,
+//     true,  false, true,  false,
+//     true,  false, false, true ,
+//     true,  true,  true,  true ,
+//     false, false, true,  true]))
+
+// Описание:
+//     Создайте простую функцию с именем приветствие , которая возвращает самое известное «привет, мир!».
+//
+// Очки стиля
+// Конечно, это настолько просто, насколько это возможно. Но насколько умным вы можете быть, чтобы создать
+// самый креативный приветственный мир, какой вы только можете себе представить? Какое решение «hello world»
+// вы хотели бы показать своим друзьям?
+
+
+// function greet (){
+//
+//     return "hello world!"
+// }
+// console.log(greet())
+
+// Нам нужна функция, которая может преобразовать строку в число. Какие способы достижения этого вы знаете?
+//
+//     Примечание. Не беспокойтесь, все входные данные будут строками,
+//     а каждая строка является абсолютно допустимым представлением целого числа.
+//
+//     Примеры
+// "1234" --> 1234
+// "605"  --> 605
+// "1405" --> 1405
+// "-7" --> -7
+//
+// const stringToNumber = function(str){
+// let number= Number(str)
+//     return number
+// }
+// console.log(stringToNumber('123'))
